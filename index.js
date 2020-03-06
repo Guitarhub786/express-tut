@@ -3,15 +3,12 @@ const express = require('express');
 const app = express();
 
 
+app.use(require('./routes'));
 
-app.get('/', (req, res) => {
-  res.send('Hello world');
-  console.log('Made it here!');
-});
 
 app.use((req, res) => {
   res.status(404)
-    .send('Unknown Request - Fatface')
+    .send('Unknown Request')
 })
 
 

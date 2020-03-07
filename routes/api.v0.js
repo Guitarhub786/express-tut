@@ -26,12 +26,12 @@ function questionHandler(req, res) {
   getQuizQuestions()
     .then(data => {
       res.json(data);
-    })
+    });
 }
 
 function answerHandler(req, res) {
   getCorrectAnswers()
     .then(data => {
       res.json(data);
-    })
+    });
 }

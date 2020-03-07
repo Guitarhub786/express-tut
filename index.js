@@ -2,6 +2,14 @@ const express = require('express');
 
 const app = express();
 
+// angular app
+app.use(express.static('../TurtleFactQuiz'));
+
+
+// pritty print json to window
+// .set sets global properties (tweak configuration)
+//app.set('json spaces', 2);
+
 
 app.use(require('./routes'));
 
